@@ -1,0 +1,1152 @@
+2026-07-30 18:44:21 INFO  c.m.p.PaymentServiceApplication - Starting PaymentServiceApplication using Java 25.0.1 with PID 21088 (C:\Users\mvgan\Downloads\payment-service\payment-service\target\classes started by mvgan in C:\Users\mvgan\Downloads\payment-service\payment-service)
+2026-07-30 18:44:21 DEBUG c.m.p.PaymentServiceApplication - Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-07-30 18:44:21 INFO  c.m.p.PaymentServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2026-07-30 18:44:21 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-07-30 18:44:21 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-07-30 18:44:23 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-30 18:44:23 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 81 ms. Found 1 JPA repository interface.
+2026-07-30 18:44:24 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-07-30 18:44:24 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-07-30 18:44:24 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-07-30 18:44:24 INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 3420 ms
+2026-07-30 18:44:25 INFO  org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-07-30 18:44:25 INFO  org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.4.1.Final
+2026-07-30 18:44:26 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-30 18:44:26 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-07-30 18:44:26 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:paymentdb user=ELAN
+2026-07-30 18:44:26 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-07-30 18:44:26 INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:paymentdb]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: PAYMENTDB/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-07-30 18:44:27 INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-30 18:44:27 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-30 18:44:27 INFO  o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-07-30 18:44:28 WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-07-30 18:44:28 INFO  o.s.b.h.a.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:paymentdb'
+2026-07-30 18:44:29 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-07-30 18:44:29 INFO  c.m.p.PaymentServiceApplication - Started PaymentServiceApplication in 8.648 seconds (process running for 9.742)
+2026-07-30 18:44:43 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-07-30 18:44:43 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-07-30 18:44:43 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2026-07-30 18:44:44 INFO  c.m.p.controller.PaymentController - Received create payment request
+2026-07-30 18:44:44 INFO  c.m.p.s.impl.PaymentServiceImpl - Creating payment. Amount=1000.00, Currency=INR
+2026-07-30 18:44:44 INFO  c.m.p.s.impl.PaymentServiceImpl - Payment created successfully. PaymentId=1b857dd3-5c7e-4a24-9db6-8c8bc0cf0a87
+2026-07-30 18:44:44 INFO  c.m.p.service.impl.GatewayClientImpl - Calling Mock Gateway for PaymentId=1b857dd3-5c7e-4a24-9db6-8c8bc0cf0a87
+2026-07-30 18:44:44 INFO  c.m.p.c.MockGatewayController - Mock Gateway API called for PaymentId=1b857dd3-5c7e-4a24-9db6-8c8bc0cf0a87
+2026-07-30 18:44:44 INFO  c.m.p.s.impl.MockGatewayServiceImpl - Mock Gateway received payment request. PaymentId=1b857dd3-5c7e-4a24-9db6-8c8bc0cf0a87
+2026-07-30 18:44:44 INFO  c.m.p.s.impl.MockGatewayServiceImpl - Payment successful. PaymentId=1b857dd3-5c7e-4a24-9db6-8c8bc0cf0a87, TransactionId=eb0467a9-767c-4bf2-8ae2-d8a046fbdc91
+2026-07-30 18:44:44 INFO  c.m.p.s.impl.MockGatewayServiceImpl - Sending callback for PaymentId=1b857dd3-5c7e-4a24-9db6-8c8bc0cf0a87
+2026-07-30 18:44:44 INFO  c.m.p.s.impl.MockGatewayServiceImpl - Callback sent successfully.
+2026-07-30 18:44:44 INFO  c.m.p.c.MockGatewayController - Mock Gateway response=SUCCESS
+2026-07-30 18:44:44 INFO  c.m.p.service.impl.GatewayClientImpl - Gateway Response received. Status=SUCCESS
+2026-07-30 18:44:44 INFO  c.m.p.s.impl.PaymentServiceImpl - Gateway response received. PaymentId=1b857dd3-5c7e-4a24-9db6-8c8bc0cf0a87, Status=SUCCESS, TransactionId=eb0467a9-767c-4bf2-8ae2-d8a046fbdc91
+2026-07-30 18:44:44 INFO  c.m.p.controller.PaymentController - Payment created successfully. PaymentId=1b857dd3-5c7e-4a24-9db6-8c8bc0cf0a87
+2026-07-30 18:44:45 INFO  c.m.p.controller.CallbackController - Received callback for PaymentId=1b857dd3-5c7e-4a24-9db6-8c8bc0cf0a87, Status=SUCCESS
+2026-07-30 18:44:45 INFO  c.m.p.s.impl.PaymentServiceImpl - Received callback. PaymentId=1b857dd3-5c7e-4a24-9db6-8c8bc0cf0a87, Status=SUCCESS
+2026-07-30 18:44:45 INFO  c.m.p.s.impl.PaymentServiceImpl - Payment updated successfully. PaymentId=1b857dd3-5c7e-4a24-9db6-8c8bc0cf0a87, Status=SUCCESS
+2026-07-30 18:44:45 INFO  c.m.p.controller.CallbackController - Callback processed successfully.
+2026-07-30 18:45:51 INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-07-30 18:45:52 INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-07-30 18:45:52 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-07-30 18:45:52 WARN  o.s.b.f.s.DisposableBeanAdapter - Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-240]
+2026-07-30 18:45:52 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-07-30 18:45:52 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-07-30 18:46:29 INFO  c.m.p.PaymentServiceApplication - Starting PaymentServiceApplication using Java 25.0.1 with PID 28120 (C:\Users\mvgan\Downloads\payment-service\payment-service\target\classes started by mvgan in C:\Users\mvgan\Downloads\payment-service\payment-service)
+2026-07-30 18:46:29 DEBUG c.m.p.PaymentServiceApplication - Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-07-30 18:46:29 INFO  c.m.p.PaymentServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2026-07-30 18:46:29 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-07-30 18:46:29 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-07-30 18:46:30 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-30 18:46:31 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 93 ms. Found 1 JPA repository interface.
+2026-07-30 18:46:32 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-07-30 18:46:32 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-07-30 18:46:32 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-07-30 18:46:32 INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 3056 ms
+2026-07-30 18:46:32 INFO  org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-07-30 18:46:32 INFO  org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.4.1.Final
+2026-07-30 18:46:33 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-30 18:46:33 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-07-30 18:46:34 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:paymentdb user=ELAN
+2026-07-30 18:46:34 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-07-30 18:46:34 INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:paymentdb]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: PAYMENTDB/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-07-30 18:46:35 INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-30 18:46:35 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-30 18:46:35 INFO  o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-07-30 18:46:36 WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-07-30 18:46:36 INFO  o.s.b.h.a.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:paymentdb'
+2026-07-30 18:46:37 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-07-30 18:46:37 INFO  c.m.p.PaymentServiceApplication - Started PaymentServiceApplication in 8.765 seconds (process running for 9.958)
+2026-07-30 18:46:56 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-07-30 18:46:56 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-07-30 18:46:56 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2026-07-30 18:46:56 INFO  c.m.p.controller.PaymentController - Received create payment request
+2026-07-30 18:46:56 INFO  c.m.p.s.impl.PaymentServiceImpl - Creating payment. Amount=1000.00, Currency=INR
+2026-07-30 18:46:56 INFO  c.m.p.s.impl.PaymentServiceImpl - Payment created successfully. PaymentId=29b77d79-d276-47b8-a2d0-0f7ce9ce976c
+2026-07-30 18:46:56 INFO  c.m.p.service.impl.GatewayClientImpl - Calling Mock Gateway for PaymentId=29b77d79-d276-47b8-a2d0-0f7ce9ce976c
+2026-07-30 18:46:57 INFO  c.m.p.c.MockGatewayController - Mock Gateway API called for PaymentId=29b77d79-d276-47b8-a2d0-0f7ce9ce976c
+2026-07-30 18:46:57 INFO  c.m.p.s.impl.MockGatewayServiceImpl - Mock Gateway received payment request. PaymentId=29b77d79-d276-47b8-a2d0-0f7ce9ce976c
+2026-07-30 18:46:57 INFO  c.m.p.s.impl.MockGatewayServiceImpl - Payment successful. PaymentId=29b77d79-d276-47b8-a2d0-0f7ce9ce976c, TransactionId=d10a23a5-0304-4251-80d6-7123db6f6a57
+2026-07-30 18:46:57 INFO  c.m.p.s.impl.MockGatewayServiceImpl - Sending callback for PaymentId=29b77d79-d276-47b8-a2d0-0f7ce9ce976c
+2026-07-30 18:46:57 INFO  c.m.p.s.impl.MockGatewayServiceImpl - Callback sent successfully.
+2026-07-30 18:46:57 INFO  c.m.p.c.MockGatewayController - Mock Gateway response=SUCCESS
+2026-07-30 18:46:57 INFO  c.m.p.service.impl.GatewayClientImpl - Gateway Response received. Status=SUCCESS
+2026-07-30 18:46:57 INFO  c.m.p.s.impl.PaymentServiceImpl - Gateway response received. PaymentId=29b77d79-d276-47b8-a2d0-0f7ce9ce976c, Status=SUCCESS, TransactionId=d10a23a5-0304-4251-80d6-7123db6f6a57
+2026-07-30 18:46:57 INFO  c.m.p.controller.PaymentController - Payment created successfully. PaymentId=29b77d79-d276-47b8-a2d0-0f7ce9ce976c
+2026-07-30 18:46:58 INFO  c.m.p.controller.CallbackController - Received callback for PaymentId=29b77d79-d276-47b8-a2d0-0f7ce9ce976c, Status=SUCCESS
+2026-07-30 18:46:58 INFO  c.m.p.s.impl.PaymentServiceImpl - Received callback. PaymentId=29b77d79-d276-47b8-a2d0-0f7ce9ce976c, Status=SUCCESS
+2026-07-30 18:46:58 INFO  c.m.p.s.impl.PaymentServiceImpl - Payment updated successfully. PaymentId=29b77d79-d276-47b8-a2d0-0f7ce9ce976c, Status=SUCCESS
+2026-07-30 18:46:58 INFO  c.m.p.controller.CallbackController - Callback processed successfully.
+2026-07-30 18:47:06 INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-07-30 18:47:07 INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-07-30 18:47:07 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-07-30 18:47:07 WARN  o.s.b.f.s.DisposableBeanAdapter - Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-240]
+2026-07-30 18:47:07 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-07-30 18:47:07 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-07-30 19:15:16 INFO  c.m.p.PaymentServiceApplication - Starting PaymentServiceApplication using Java 25.0.1 with PID 2684 (C:\Users\mvgan\Downloads\payment-service\payment-service\target\classes started by mvgan in C:\Users\mvgan\Downloads\payment-service\payment-service)
+2026-07-30 19:15:16 DEBUG c.m.p.PaymentServiceApplication - Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-07-30 19:15:16 INFO  c.m.p.PaymentServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2026-07-30 19:15:16 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-07-30 19:15:16 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-07-30 19:15:18 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-30 19:15:18 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 94 ms. Found 1 JPA repository interface.
+2026-07-30 19:15:20 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-07-30 19:15:20 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-07-30 19:15:20 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-07-30 19:15:20 INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 3348 ms
+2026-07-30 19:15:20 INFO  org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-07-30 19:15:20 INFO  org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.4.1.Final
+2026-07-30 19:15:21 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-30 19:15:21 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-07-30 19:15:21 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:paymentdb user=ELAN
+2026-07-30 19:15:21 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-07-30 19:15:21 INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:paymentdb]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: PAYMENTDB/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-07-30 19:15:23 INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-30 19:15:23 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-30 19:15:23 INFO  o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-07-30 19:15:23 WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-07-30 19:15:24 INFO  o.s.b.h.a.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:paymentdb'
+2026-07-30 19:15:24 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-07-30 19:15:24 INFO  c.m.p.PaymentServiceApplication - Started PaymentServiceApplication in 8.853 seconds (process running for 9.947)
+2026-07-30 19:15:24 INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-07-30 19:15:25 INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-07-30 19:15:25 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-07-30 19:15:25 WARN  o.s.b.f.s.DisposableBeanAdapter - Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-240]
+2026-07-30 19:15:25 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-07-30 19:15:25 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-07-30 19:15:28 INFO  c.m.p.PaymentServiceApplication - Starting PaymentServiceApplication using Java 25.0.1 with PID 29780 (C:\Users\mvgan\Downloads\payment-service\payment-service\target\classes started by mvgan in C:\Users\mvgan\Downloads\payment-service\payment-service)
+2026-07-30 19:15:28 DEBUG c.m.p.PaymentServiceApplication - Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-07-30 19:15:28 INFO  c.m.p.PaymentServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2026-07-30 19:15:29 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-07-30 19:15:29 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-07-30 19:15:30 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-30 19:15:30 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 79 ms. Found 1 JPA repository interface.
+2026-07-30 19:15:31 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-07-30 19:15:31 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-07-30 19:15:31 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-07-30 19:15:32 INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 2999 ms
+2026-07-30 19:15:32 INFO  org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-07-30 19:15:32 INFO  org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.4.1.Final
+2026-07-30 19:15:33 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-30 19:15:33 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-07-30 19:15:34 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:paymentdb user=ELAN
+2026-07-30 19:15:34 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-07-30 19:15:34 INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:paymentdb]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: PAYMENTDB/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-07-30 19:15:35 INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-30 19:15:35 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-30 19:15:36 INFO  o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-07-30 19:15:37 WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-07-30 19:15:38 INFO  o.s.b.h.a.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:paymentdb'
+2026-07-30 19:15:38 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-07-30 19:15:38 INFO  c.m.p.PaymentServiceApplication - Started PaymentServiceApplication in 10.557 seconds (process running for 12.346)
+2026-07-30 19:15:54 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-07-30 19:15:54 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-07-30 19:15:54 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2026-07-30 19:15:54 INFO  c.m.p.controller.PaymentController - Received create payment request
+2026-07-30 19:16:29 WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=55s787ms893µs800ns).
+2026-07-30 19:16:42 INFO  c.m.p.s.impl.PaymentServiceImpl - Creating payment. Amount=1000.00, Currency=INR
+2026-07-30 19:17:19 INFO  c.m.p.s.impl.PaymentServiceImpl - Payment created successfully. PaymentId=e0afdc48-121f-42ff-af7e-bd376d50c025
+2026-07-30 19:18:38 WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=52s230ms508µs900ns).
+2026-07-30 19:18:38 INFO  c.m.p.service.impl.GatewayClientImpl - Calling Mock Gateway for PaymentId=e0afdc48-121f-42ff-af7e-bd376d50c025
+2026-07-30 19:18:46 INFO  c.m.p.c.MockGatewayController - Mock Gateway API called for PaymentId=e0afdc48-121f-42ff-af7e-bd376d50c025
+2026-07-30 19:18:46 INFO  c.m.p.s.impl.MockGatewayServiceImpl - Mock Gateway received payment request. PaymentId=e0afdc48-121f-42ff-af7e-bd376d50c025
+2026-07-30 19:18:46 INFO  c.m.p.s.impl.MockGatewayServiceImpl - Payment successful. PaymentId=e0afdc48-121f-42ff-af7e-bd376d50c025, TransactionId=8c16270b-719c-4b8c-b1ec-8957483bd449
+2026-07-30 19:18:46 INFO  c.m.p.s.impl.MockGatewayServiceImpl - Sending callback for PaymentId=e0afdc48-121f-42ff-af7e-bd376d50c025
+2026-07-30 19:18:46 INFO  c.m.p.s.impl.MockGatewayServiceImpl - Callback sent successfully.
+2026-07-30 19:18:46 INFO  c.m.p.c.MockGatewayController - Mock Gateway response=SUCCESS
+2026-07-30 19:19:43 WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m4s796ms348µs800ns).
+2026-07-30 19:20:27 INFO  c.m.p.service.impl.GatewayClientImpl - Gateway Response received. Status=SUCCESS
+2026-07-30 19:21:23 WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=56s319ms307µs100ns).
+2026-07-30 19:22:07 INFO  c.m.p.s.impl.PaymentServiceImpl - Gateway response received. PaymentId=e0afdc48-121f-42ff-af7e-bd376d50c025, Status=SUCCESS, TransactionId=8c16270b-719c-4b8c-b1ec-8957483bd449
+2026-07-30 19:22:33 INFO  c.m.p.controller.CallbackController - Received callback for PaymentId=e0afdc48-121f-42ff-af7e-bd376d50c025, Status=SUCCESS
+2026-07-30 19:22:33 INFO  c.m.p.s.impl.PaymentServiceImpl - Received callback. PaymentId=e0afdc48-121f-42ff-af7e-bd376d50c025, Status=SUCCESS
+2026-07-30 19:22:45 ERROR c.m.p.s.impl.MockGatewayServiceImpl - Callback failed
+org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:8080/callbacks/payment": Read timed out
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:780)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:760)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:677)
+	at org.springframework.web.client.RestTemplate.postForObject(RestTemplate.java:401)
+	at com.matrix.payment_service.service.impl.MockGatewayServiceImpl.lambda$processPayment$0(MockGatewayServiceImpl.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedRead(NioSocketImpl.java:277)
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:302)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:354)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:798)
+	at java.base/java.net.Socket$SocketInputStream.implRead(Socket.java:974)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:964)
+	at java.base/java.io.BufferedInputStream.fill(BufferedInputStream.java:289)
+	at java.base/java.io.BufferedInputStream.read1(BufferedInputStream.java:330)
+	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:388)
+	at java.base/sun.net.www.http.HttpClient.parseHTTPHeader(HttpClient.java:795)
+	at java.base/sun.net.www.http.HttpClient.parseHTTP(HttpClient.java:727)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1392)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1302)
+	at java.base/java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:493)
+	at org.springframework.http.client.SimpleClientHttpResponse.getStatusCode(SimpleClientHttpResponse.java:55)
+	at org.springframework.web.client.DefaultResponseErrorHandler.hasError(DefaultResponseErrorHandler.java:83)
+	at org.springframework.web.client.RestTemplate.handleResponse(RestTemplate.java:796)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:756)
+	... 4 common frames omitted
+2026-07-30 19:23:32 ERROR c.m.p.s.impl.PaymentServiceImpl - Payment not found during callback. PaymentId=e0afdc48-121f-42ff-af7e-bd376d50c025
+2026-07-30 19:23:32 INFO  c.m.p.controller.PaymentController - Payment created successfully. PaymentId=e0afdc48-121f-42ff-af7e-bd376d50c025
+2026-07-30 19:23:32 ERROR c.m.p.e.GlobalExceptionHandler - Payment not found : Payment not found with id : e0afdc48-121f-42ff-af7e-bd376d50c025
+2026-07-30 19:23:32 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.matrix.payment_service.exception.PaymentNotFoundException: Payment not found with id : e0afdc48-121f-42ff-af7e-bd376d50c025]
+2026-07-30 19:23:48 INFO  c.m.p.controller.PaymentController - Received create payment request
+2026-07-30 19:23:58 INFO  c.m.p.s.impl.PaymentServiceImpl - Creating payment. Amount=1000.00, Currency=INR
+2026-07-30 19:24:06 INFO  c.m.p.s.impl.PaymentServiceImpl - Payment created successfully. PaymentId=fcfe50ae-1148-4513-9ac6-bc2a7926a651
+2026-07-30 19:24:25 INFO  c.m.p.service.impl.GatewayClientImpl - Calling Mock Gateway for PaymentId=fcfe50ae-1148-4513-9ac6-bc2a7926a651
+2026-07-30 19:24:40 INFO  c.m.p.c.MockGatewayController - Mock Gateway API called for PaymentId=fcfe50ae-1148-4513-9ac6-bc2a7926a651
+2026-07-30 19:24:40 INFO  c.m.p.s.impl.MockGatewayServiceImpl - Mock Gateway received payment request. PaymentId=fcfe50ae-1148-4513-9ac6-bc2a7926a651
+2026-07-30 19:24:40 INFO  c.m.p.s.impl.MockGatewayServiceImpl - Payment successful. PaymentId=fcfe50ae-1148-4513-9ac6-bc2a7926a651, TransactionId=5a72c917-8ee3-40fb-b2b0-31a8c0206b7c
+2026-07-30 19:24:40 INFO  c.m.p.s.impl.MockGatewayServiceImpl - Sending callback for PaymentId=fcfe50ae-1148-4513-9ac6-bc2a7926a651
+2026-07-30 19:24:40 INFO  c.m.p.s.impl.MockGatewayServiceImpl - Callback sent successfully.
+2026-07-30 19:24:40 INFO  c.m.p.c.MockGatewayController - Mock Gateway response=SUCCESS
+2026-07-30 19:25:59 WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m33s91ms964µs100ns).
+2026-07-30 19:26:16 INFO  c.m.p.service.impl.GatewayClientImpl - Gateway Response received. Status=SUCCESS
+2026-07-30 19:26:21 ERROR c.m.p.s.impl.MockGatewayServiceImpl - Callback failed
+org.springframework.web.client.ResourceAccessException: I/O error on POST request for "http://localhost:8080/callbacks/payment": Read timed out
+	at org.springframework.web.client.RestTemplate.createResourceAccessException(RestTemplate.java:780)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:760)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:677)
+	at org.springframework.web.client.RestTemplate.postForObject(RestTemplate.java:401)
+	at com.matrix.payment_service.service.impl.MockGatewayServiceImpl.lambda$processPayment$0(MockGatewayServiceImpl.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.base/sun.nio.ch.NioSocketImpl.timedRead(NioSocketImpl.java:277)
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:302)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:354)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:798)
+	at java.base/java.net.Socket$SocketInputStream.implRead(Socket.java:974)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:964)
+	at java.base/java.io.BufferedInputStream.fill(BufferedInputStream.java:289)
+	at java.base/java.io.BufferedInputStream.read1(BufferedInputStream.java:330)
+	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:388)
+	at java.base/sun.net.www.http.HttpClient.parseHTTPHeader(HttpClient.java:795)
+	at java.base/sun.net.www.http.HttpClient.parseHTTP(HttpClient.java:727)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1392)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1302)
+	at java.base/java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:493)
+	at org.springframework.http.client.SimpleClientHttpResponse.getStatusCode(SimpleClientHttpResponse.java:55)
+	at org.springframework.web.client.DefaultResponseErrorHandler.hasError(DefaultResponseErrorHandler.java:83)
+	at org.springframework.web.client.RestTemplate.handleResponse(RestTemplate.java:796)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:756)
+	... 4 common frames omitted
+2026-07-30 19:26:23 INFO  c.m.p.controller.CallbackController - Received callback for PaymentId=fcfe50ae-1148-4513-9ac6-bc2a7926a651, Status=SUCCESS
+2026-07-30 19:26:29 INFO  c.m.p.s.impl.PaymentServiceImpl - Received callback. PaymentId=fcfe50ae-1148-4513-9ac6-bc2a7926a651, Status=SUCCESS
+2026-07-30 19:26:29 INFO  c.m.p.s.impl.PaymentServiceImpl - Gateway response received. PaymentId=fcfe50ae-1148-4513-9ac6-bc2a7926a651, Status=SUCCESS, TransactionId=5a72c917-8ee3-40fb-b2b0-31a8c0206b7c
+2026-07-30 19:26:29 ERROR c.m.p.s.impl.PaymentServiceImpl - Payment not found during callback. PaymentId=fcfe50ae-1148-4513-9ac6-bc2a7926a651
+2026-07-30 19:26:29 ERROR c.m.p.e.GlobalExceptionHandler - Payment not found : Payment not found with id : fcfe50ae-1148-4513-9ac6-bc2a7926a651
+2026-07-30 19:26:32 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.matrix.payment_service.exception.PaymentNotFoundException: Payment not found with id : fcfe50ae-1148-4513-9ac6-bc2a7926a651]
+2026-07-30 19:27:24 INFO  c.m.p.controller.PaymentController - Payment created successfully. PaymentId=fcfe50ae-1148-4513-9ac6-bc2a7926a651
+2026-07-30 19:32:42 INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-07-30 19:32:43 INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-07-30 19:32:43 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-07-30 19:32:43 WARN  o.s.b.f.s.DisposableBeanAdapter - Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-240]
+2026-07-30 19:32:43 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-07-30 19:32:43 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-07-30 19:52:32 INFO  c.m.p.PaymentServiceApplication - Starting PaymentServiceApplication using Java 25.0.1 with PID 13032 (C:\Users\mvgan\Downloads\payment-service\payment-service\target\classes started by mvgan in C:\Users\mvgan\Downloads\payment-service\payment-service)
+2026-07-30 19:52:32 DEBUG c.m.p.PaymentServiceApplication - Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-07-30 19:52:32 INFO  c.m.p.PaymentServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2026-07-30 19:52:33 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-07-30 19:52:33 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-07-30 19:52:34 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-30 19:52:34 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 99 ms. Found 1 JPA repository interface.
+2026-07-30 19:52:36 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-07-30 19:52:36 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-07-30 19:52:36 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-07-30 19:52:36 INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 3067 ms
+2026-07-30 19:52:36 INFO  org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-07-30 19:52:36 INFO  org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.4.1.Final
+2026-07-30 19:52:37 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-30 19:52:37 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-07-30 19:52:37 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:paymentdb user=ELAN
+2026-07-30 19:52:37 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-07-30 19:52:37 INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:paymentdb]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: PAYMENTDB/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-07-30 19:52:39 INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-30 19:52:39 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-30 19:52:39 INFO  o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-07-30 19:52:39 WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-07-30 19:52:40 INFO  o.s.b.h.a.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:paymentdb'
+2026-07-30 19:52:40 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-07-30 19:52:40 INFO  c.m.p.PaymentServiceApplication - Started PaymentServiceApplication in 8.496 seconds (process running for 9.583)
+2026-07-30 19:53:22 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-07-30 19:53:22 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-07-30 19:53:22 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2026-07-30 19:53:22 ERROR c.m.p.e.GlobalExceptionHandler - Unexpected exception
+org.springframework.web.servlet.resource.NoResourceFoundException: No static resource mock-gateway/pay for request '//mock-gateway/pay'.
+	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:527)
+	at org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter.handle(HttpRequestHandlerAdapter.java:50)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:653)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:723)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1272)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1801)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+2026-07-30 19:53:22 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource mock-gateway/pay for request '//mock-gateway/pay'.]
+2026-07-30 19:53:36 INFO  c.m.p.c.MockGatewayController - Mock Gateway API called for PaymentId=PAY123
+2026-07-30 19:53:36 INFO  c.m.p.s.impl.MockGatewayServiceImpl - Mock Gateway received payment request. PaymentId=PAY123
+2026-07-30 19:53:36 INFO  c.m.p.s.impl.MockGatewayServiceImpl - Payment successful. PaymentId=PAY123, TransactionId=5b610b19-4215-40d4-88a2-9e4e631ff7fc
+2026-07-30 19:53:36 INFO  c.m.p.s.impl.MockGatewayServiceImpl - Sending callback for PaymentId=PAY123
+2026-07-30 19:53:36 INFO  c.m.p.s.impl.MockGatewayServiceImpl - Callback sent successfully.
+2026-07-30 19:53:36 INFO  c.m.p.c.MockGatewayController - Mock Gateway response=SUCCESS
+2026-07-30 19:53:37 INFO  c.m.p.controller.CallbackController - Received callback for PaymentId=PAY123, Status=SUCCESS
+2026-07-30 19:53:37 INFO  c.m.p.s.impl.PaymentServiceImpl - Received callback. PaymentId=PAY123, Status=SUCCESS
+2026-07-30 19:53:37 ERROR c.m.p.s.impl.PaymentServiceImpl - Payment not found during callback. PaymentId=PAY123
+2026-07-30 19:53:37 ERROR c.m.p.e.GlobalExceptionHandler - Payment not found : Payment not found with id : PAY123
+2026-07-30 19:53:37 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.matrix.payment_service.exception.PaymentNotFoundException: Payment not found with id : PAY123]
+2026-07-30 19:53:37 ERROR c.m.p.s.impl.MockGatewayServiceImpl - Callback failed
+org.springframework.web.client.HttpClientErrorException$NotFound: 404  on POST request for "http://localhost:8080/callbacks/payment": "{"timestamp":"2026-07-30T19:53:37.3150999","status":404,"error":"Not Found","message":"Payment not found with id : PAY123","path":"/callbacks/payment"}"
+	at org.springframework.web.client.HttpClientErrorException.create(HttpClientErrorException.java:115)
+	at org.springframework.web.client.DefaultResponseErrorHandler.handleError(DefaultResponseErrorHandler.java:144)
+	at org.springframework.web.client.DefaultResponseErrorHandler.handleError(DefaultResponseErrorHandler.java:119)
+	at org.springframework.web.client.RestTemplate.handleResponse(RestTemplate.java:807)
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:756)
+	at org.springframework.web.client.RestTemplate.execute(RestTemplate.java:677)
+	at org.springframework.web.client.RestTemplate.postForObject(RestTemplate.java:401)
+	at com.matrix.payment_service.service.impl.MockGatewayServiceImpl.lambda$processPayment$0(MockGatewayServiceImpl.java:88)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+2026-07-30 19:54:17 INFO  c.m.p.controller.CallbackController - Received callback for PaymentId=PAY123, Status=SUCCESS
+2026-07-30 19:54:17 INFO  c.m.p.s.impl.PaymentServiceImpl - Received callback. PaymentId=PAY123, Status=SUCCESS
+2026-07-30 19:54:17 ERROR c.m.p.s.impl.PaymentServiceImpl - Payment not found during callback. PaymentId=PAY123
+2026-07-30 19:54:17 ERROR c.m.p.e.GlobalExceptionHandler - Payment not found : Payment not found with id : PAY123
+2026-07-30 19:54:17 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.matrix.payment_service.exception.PaymentNotFoundException: Payment not found with id : PAY123]
+2026-07-30 19:55:13 ERROR c.m.p.e.GlobalExceptionHandler - Unexpected exception
+org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico for request '/favicon.ico'.
+	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:527)
+	at org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter.handle(HttpRequestHandlerAdapter.java:50)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:892)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:633)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:723)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1272)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1801)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+2026-07-30 19:55:13 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico for request '/favicon.ico'.]
+2026-07-30 19:55:19 ERROR c.m.p.e.GlobalExceptionHandler - Unexpected exception
+org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico for request '/favicon.ico'.
+	at org.springframework.web.servlet.resource.ResourceHttpRequestHandler.handleRequest(ResourceHttpRequestHandler.java:527)
+	at org.springframework.web.servlet.mvc.HttpRequestHandlerAdapter.handle(HttpRequestHandlerAdapter.java:50)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1000)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:892)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:633)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:874)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:723)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:128)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:107)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:165)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:492)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:113)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:83)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:72)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1272)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1801)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:946)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:480)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:57)
+	at java.base/java.lang.Thread.run(Thread.java:1474)
+2026-07-30 19:55:19 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [org.springframework.web.servlet.resource.NoResourceFoundException: No static resource favicon.ico for request '/favicon.ico'.]
+2026-07-30 19:55:40 INFO  c.m.p.controller.PaymentController - Received create payment request
+2026-07-30 19:55:40 INFO  c.m.p.s.impl.PaymentServiceImpl - Creating payment. Amount=10000.00, Currency=INR
+2026-07-30 19:55:40 INFO  c.m.p.s.impl.PaymentServiceImpl - Payment created successfully. PaymentId=cd8bbdb4-4881-43e9-8ded-8db2f7b4a989
+2026-07-30 19:55:40 INFO  c.m.p.service.impl.GatewayClientImpl - Calling Mock Gateway for PaymentId=cd8bbdb4-4881-43e9-8ded-8db2f7b4a989
+2026-07-30 19:55:40 INFO  c.m.p.c.MockGatewayController - Mock Gateway API called for PaymentId=cd8bbdb4-4881-43e9-8ded-8db2f7b4a989
+2026-07-30 19:55:40 INFO  c.m.p.s.impl.MockGatewayServiceImpl - Mock Gateway received payment request. PaymentId=cd8bbdb4-4881-43e9-8ded-8db2f7b4a989
+2026-07-30 19:55:40 WARN  c.m.p.s.impl.MockGatewayServiceImpl - Payment failed. PaymentId=cd8bbdb4-4881-43e9-8ded-8db2f7b4a989, Reason=Insufficient Funds
+2026-07-30 19:55:40 INFO  c.m.p.s.impl.MockGatewayServiceImpl - Sending callback for PaymentId=cd8bbdb4-4881-43e9-8ded-8db2f7b4a989
+2026-07-30 19:55:40 INFO  c.m.p.s.impl.MockGatewayServiceImpl - Callback sent successfully.
+2026-07-30 19:55:40 INFO  c.m.p.c.MockGatewayController - Mock Gateway response=FAILED
+2026-07-30 19:55:40 INFO  c.m.p.service.impl.GatewayClientImpl - Gateway Response received. Status=FAILED
+2026-07-30 19:55:40 INFO  c.m.p.s.impl.PaymentServiceImpl - Gateway response received. PaymentId=cd8bbdb4-4881-43e9-8ded-8db2f7b4a989, Status=FAILED, TransactionId=null
+2026-07-30 19:55:40 INFO  c.m.p.controller.PaymentController - Payment created successfully. PaymentId=cd8bbdb4-4881-43e9-8ded-8db2f7b4a989
+2026-07-30 19:55:41 INFO  c.m.p.controller.CallbackController - Received callback for PaymentId=cd8bbdb4-4881-43e9-8ded-8db2f7b4a989, Status=FAILED
+2026-07-30 19:55:41 INFO  c.m.p.s.impl.PaymentServiceImpl - Received callback. PaymentId=cd8bbdb4-4881-43e9-8ded-8db2f7b4a989, Status=FAILED
+2026-07-30 19:55:41 INFO  c.m.p.s.impl.PaymentServiceImpl - Payment updated successfully. PaymentId=cd8bbdb4-4881-43e9-8ded-8db2f7b4a989, Status=FAILED
+2026-07-30 19:55:41 INFO  c.m.p.controller.CallbackController - Callback processed successfully.
+2026-07-30 19:55:46 INFO  c.m.p.controller.PaymentController - Received create payment request
+2026-07-30 19:55:46 INFO  c.m.p.s.impl.PaymentServiceImpl - Creating payment. Amount=1000.00, Currency=INR
+2026-07-30 19:55:46 INFO  c.m.p.s.impl.PaymentServiceImpl - Payment created successfully. PaymentId=b18aabe6-21fa-4ada-b3c5-b6cc4b136c93
+2026-07-30 19:55:46 INFO  c.m.p.service.impl.GatewayClientImpl - Calling Mock Gateway for PaymentId=b18aabe6-21fa-4ada-b3c5-b6cc4b136c93
+2026-07-30 19:55:46 INFO  c.m.p.c.MockGatewayController - Mock Gateway API called for PaymentId=b18aabe6-21fa-4ada-b3c5-b6cc4b136c93
+2026-07-30 19:55:46 INFO  c.m.p.s.impl.MockGatewayServiceImpl - Mock Gateway received payment request. PaymentId=b18aabe6-21fa-4ada-b3c5-b6cc4b136c93
+2026-07-30 19:55:46 INFO  c.m.p.s.impl.MockGatewayServiceImpl - Payment successful. PaymentId=b18aabe6-21fa-4ada-b3c5-b6cc4b136c93, TransactionId=37a06e00-485e-4b41-8cc1-214f32a1a2bb
+2026-07-30 19:55:46 INFO  c.m.p.s.impl.MockGatewayServiceImpl - Sending callback for PaymentId=b18aabe6-21fa-4ada-b3c5-b6cc4b136c93
+2026-07-30 19:55:46 INFO  c.m.p.s.impl.MockGatewayServiceImpl - Callback sent successfully.
+2026-07-30 19:55:46 INFO  c.m.p.c.MockGatewayController - Mock Gateway response=SUCCESS
+2026-07-30 19:55:46 INFO  c.m.p.service.impl.GatewayClientImpl - Gateway Response received. Status=SUCCESS
+2026-07-30 19:55:46 INFO  c.m.p.s.impl.PaymentServiceImpl - Gateway response received. PaymentId=b18aabe6-21fa-4ada-b3c5-b6cc4b136c93, Status=SUCCESS, TransactionId=37a06e00-485e-4b41-8cc1-214f32a1a2bb
+2026-07-30 19:55:46 INFO  c.m.p.controller.PaymentController - Payment created successfully. PaymentId=b18aabe6-21fa-4ada-b3c5-b6cc4b136c93
+2026-07-30 19:55:47 INFO  c.m.p.controller.CallbackController - Received callback for PaymentId=b18aabe6-21fa-4ada-b3c5-b6cc4b136c93, Status=SUCCESS
+2026-07-30 19:55:47 INFO  c.m.p.s.impl.PaymentServiceImpl - Received callback. PaymentId=b18aabe6-21fa-4ada-b3c5-b6cc4b136c93, Status=SUCCESS
+2026-07-30 19:55:47 INFO  c.m.p.s.impl.PaymentServiceImpl - Payment updated successfully. PaymentId=b18aabe6-21fa-4ada-b3c5-b6cc4b136c93, Status=SUCCESS
+2026-07-30 19:55:47 INFO  c.m.p.controller.CallbackController - Callback processed successfully.
+2026-07-30 19:56:31 INFO  c.m.p.controller.CallbackController - Received callback for PaymentId=cd8bbdb4-4881-43e9-8ded-8db2f7b4a989, Status=SUCCESS
+2026-07-30 19:56:31 INFO  c.m.p.s.impl.PaymentServiceImpl - Received callback. PaymentId=cd8bbdb4-4881-43e9-8ded-8db2f7b4a989, Status=SUCCESS
+2026-07-30 19:56:31 WARN  c.m.p.s.impl.PaymentServiceImpl - Duplicate callback ignored. PaymentId=cd8bbdb4-4881-43e9-8ded-8db2f7b4a989, CurrentStatus=FAILED
+2026-07-30 19:56:31 INFO  c.m.p.controller.CallbackController - Callback processed successfully.
+2026-07-30 19:56:41 INFO  c.m.p.controller.CallbackController - Received callback for PaymentId=cd8bbdb4-4881-43e9-8ded-8db2f7b4a989, Status=SUCCESS
+2026-07-30 19:56:41 INFO  c.m.p.s.impl.PaymentServiceImpl - Received callback. PaymentId=cd8bbdb4-4881-43e9-8ded-8db2f7b4a989, Status=SUCCESS
+2026-07-30 19:56:41 WARN  c.m.p.s.impl.PaymentServiceImpl - Duplicate callback ignored. PaymentId=cd8bbdb4-4881-43e9-8ded-8db2f7b4a989, CurrentStatus=FAILED
+2026-07-30 19:56:41 INFO  c.m.p.controller.CallbackController - Callback processed successfully.
+2026-07-30 20:00:04 INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-07-30 20:00:04 INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-07-30 20:00:04 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-07-30 20:00:04 WARN  o.s.b.f.s.DisposableBeanAdapter - Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-240]
+2026-07-30 20:00:04 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-07-30 20:00:04 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-07-30 20:14:04 INFO  c.m.p.PaymentServiceApplicationTests - Starting PaymentServiceApplicationTests using Java 24.0.1 with PID 12528 (started by mvgan in C:\Users\mvgan\Downloads\payment-service\payment-service)
+2026-07-30 20:14:04 DEBUG c.m.p.PaymentServiceApplicationTests - Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-07-30 20:14:04 INFO  c.m.p.PaymentServiceApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2026-07-30 20:14:06 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-30 20:14:06 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 108 ms. Found 1 JPA repository interface.
+2026-07-30 20:14:07 INFO  org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-07-30 20:14:08 INFO  org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.4.1.Final
+2026-07-30 20:14:08 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-30 20:14:08 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-07-30 20:14:09 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:paymentdb user=ELANGOVAN
+2026-07-30 20:14:09 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-07-30 20:14:09 INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:paymentdb]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: PAYMENTDB/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-07-30 20:14:10 INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-30 20:14:10 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-30 20:14:11 INFO  o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-07-30 20:14:11 WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-07-30 20:14:12 INFO  o.s.b.h.a.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:paymentdb'
+2026-07-30 20:14:12 INFO  c.m.p.PaymentServiceApplicationTests - Started PaymentServiceApplicationTests in 8.959 seconds (process running for 11.874)
+2026-07-30 20:14:14 INFO  c.m.p.service.impl.GatewayClientImpl - Calling Mock Gateway for PaymentId=PAY123
+2026-07-30 20:14:14 INFO  c.m.p.service.impl.GatewayClientImpl - Gateway Response received. Status=SUCCESS
+2026-07-30 20:14:14 INFO  c.m.p.service.impl.GatewayClientImpl - Calling Mock Gateway for PaymentId=PAY123
+2026-07-30 20:14:14 INFO  c.m.p.s.impl.MockGatewayServiceImpl - Mock Gateway received payment request. PaymentId=PAY123
+2026-07-30 20:14:14 INFO  c.m.p.s.impl.MockGatewayServiceImpl - Payment successful. PaymentId=PAY123, TransactionId=f469c937-de7e-48db-aa91-215bfe9a6f3a
+2026-07-30 20:14:14 INFO  c.m.p.s.impl.MockGatewayServiceImpl - Sending callback for PaymentId=PAY123
+2026-07-30 20:14:14 INFO  c.m.p.s.impl.MockGatewayServiceImpl - Callback sent successfully.
+2026-07-30 20:14:15 INFO  c.m.p.s.impl.MockGatewayServiceImpl - Mock Gateway received payment request. PaymentId=PAY123
+2026-07-30 20:14:15 INFO  c.m.p.s.impl.MockGatewayServiceImpl - Mock Gateway received payment request. PaymentId=PAY123
+2026-07-30 20:14:15 WARN  c.m.p.s.impl.MockGatewayServiceImpl - Payment failed. PaymentId=PAY123, Reason=Insufficient Funds
+2026-07-30 20:14:15 INFO  c.m.p.s.impl.MockGatewayServiceImpl - Sending callback for PaymentId=PAY123
+2026-07-30 20:14:15 INFO  c.m.p.s.impl.MockGatewayServiceImpl - Callback sent successfully.
+2026-07-30 20:14:17 INFO  c.m.p.s.impl.PaymentServiceImpl - Fetching payment details. PaymentId=PAY123
+2026-07-30 20:14:17 INFO  c.m.p.s.impl.PaymentServiceImpl - Payment found. PaymentId=PAY123, Status=SUCCESS
+2026-07-30 20:14:17 INFO  c.m.p.s.impl.PaymentServiceImpl - Fetching payments with status=SUCCESS
+2026-07-30 20:14:17 INFO  c.m.p.s.impl.PaymentServiceImpl - Fetching all payments
+2026-07-30 20:14:17 INFO  c.m.p.s.impl.PaymentServiceImpl - Creating payment. Amount=1000, Currency=INR
+2026-07-30 20:14:17 INFO  c.m.p.s.impl.PaymentServiceImpl - Payment created successfully. PaymentId=PAY123
+2026-07-30 20:14:17 ERROR c.m.p.s.impl.PaymentServiceImpl - Failed to invoke payment gateway for PaymentId=PAY123
+java.lang.RuntimeException: Gateway unavailable
+	at com.matrix.payment_service.service.impl.PaymentServiceImpl.createPayment(PaymentServiceImpl.java:53)
+	at com.matrix.payment_service.service.impl.PaymentServiceImplTest.lambda$shouldMarkPaymentFailedWhenGatewayFails$0(PaymentServiceImplTest.java:98)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:54)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+	at org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3223)
+	at com.matrix.payment_service.service.impl.PaymentServiceImplTest.shouldMarkPaymentFailedWhenGatewayFails(PaymentServiceImplTest.java:96)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:701)
+	at org.junit.platform.commons.support.ReflectionSupport.invokeMethod(ReflectionSupport.java:502)
+	at org.junit.jupiter.engine.support.MethodReflectionUtils.invoke(MethodReflectionUtils.java:45)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:61)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:124)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:163)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:148)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:123)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:105)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:99)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:66)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:47)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:39)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:104)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:98)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invokeVoid(InterceptingExecutableInvoker.java:71)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$0(TestMethodTestDescriptor.java:219)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:215)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:157)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:70)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$2(NodeTestTask.java:176)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$1(NodeTestTask.java:166)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$0(NodeTestTask.java:164)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:163)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:116)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:42)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$2(NodeTestTask.java:180)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$1(NodeTestTask.java:166)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$0(NodeTestTask.java:164)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:163)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:116)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:42)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$2(NodeTestTask.java:180)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$1(NodeTestTask.java:166)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$0(NodeTestTask.java:164)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:163)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:116)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:36)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:52)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:58)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.executeEngine(EngineExecutionOrchestrator.java:246)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.failOrExecuteEngine(EngineExecutionOrchestrator.java:218)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:179)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:108)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:66)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:157)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:65)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:125)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:58)
+	at org.junit.platform.launcher.core.InterceptingLauncher.lambda$execute$2(InterceptingLauncher.java:57)
+	at org.junit.platform.launcher.core.ClasspathAlignmentCheckingLauncherInterceptor.intercept(ClasspathAlignmentCheckingLauncherInterceptor.java:25)
+	at org.junit.platform.launcher.core.InterceptingLauncher.execute(InterceptingLauncher.java:56)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:58)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.apache.maven.surefire.api.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:125)
+	at org.apache.maven.surefire.junitplatform.LauncherAdapter.executeWithCancellationToken(LauncherAdapter.java:68)
+	at org.apache.maven.surefire.junitplatform.LauncherAdapter.execute(LauncherAdapter.java:54)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:203)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:168)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:136)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+2026-07-30 20:14:17 INFO  c.m.p.s.impl.PaymentServiceImpl - Received callback. PaymentId=PAY123, Status=SUCCESS
+2026-07-30 20:14:17 WARN  c.m.p.s.impl.PaymentServiceImpl - Duplicate callback ignored. PaymentId=PAY123, CurrentStatus=SUCCESS
+2026-07-30 20:14:17 INFO  c.m.p.s.impl.PaymentServiceImpl - Creating payment. Amount=1000, Currency=INR
+2026-07-30 20:14:17 INFO  c.m.p.s.impl.PaymentServiceImpl - Payment created successfully. PaymentId=PAY123
+2026-07-30 20:14:17 INFO  c.m.p.s.impl.PaymentServiceImpl - Gateway response received. PaymentId=PAY123, Status=SUCCESS, TransactionId=TXN123
+2026-07-30 20:14:17 INFO  c.m.p.s.impl.PaymentServiceImpl - Fetching payment details. PaymentId=PAY123
+2026-07-30 20:14:17 ERROR c.m.p.s.impl.PaymentServiceImpl - Payment not found. PaymentId=PAY123
+2026-07-30 20:14:17 INFO  c.m.p.s.impl.PaymentServiceImpl - Received callback. PaymentId=PAY123, Status=SUCCESS
+2026-07-30 20:14:17 INFO  c.m.p.s.impl.PaymentServiceImpl - Payment updated successfully. PaymentId=PAY123, Status=SUCCESS
+2026-07-30 20:14:17 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-07-30 20:14:17 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-07-30 20:14:17 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-07-30 20:16:48 INFO  c.m.p.PaymentServiceApplicationTests - Starting PaymentServiceApplicationTests using Java 24.0.1 with PID 9032 (started by mvgan in C:\Users\mvgan\Downloads\payment-service\payment-service)
+2026-07-30 20:16:48 DEBUG c.m.p.PaymentServiceApplicationTests - Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-07-30 20:16:48 INFO  c.m.p.PaymentServiceApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2026-07-30 20:16:50 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-30 20:16:50 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 74 ms. Found 1 JPA repository interface.
+2026-07-30 20:16:51 INFO  org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-07-30 20:16:51 INFO  org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.4.1.Final
+2026-07-30 20:16:52 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-30 20:16:52 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-07-30 20:16:52 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:paymentdb user=ELANGOVAN
+2026-07-30 20:16:52 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-07-30 20:16:52 INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:paymentdb]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: PAYMENTDB/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-07-30 20:16:53 INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-30 20:16:53 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-30 20:16:54 INFO  o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-07-30 20:16:54 WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-07-30 20:16:55 INFO  o.s.b.h.a.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:paymentdb'
+2026-07-30 20:16:55 INFO  c.m.p.PaymentServiceApplicationTests - Started PaymentServiceApplicationTests in 7.982 seconds (process running for 10.147)
+2026-07-30 20:16:57 INFO  c.m.p.service.impl.GatewayClientImpl - Calling Mock Gateway for PaymentId=PAY123
+2026-07-30 20:16:57 INFO  c.m.p.service.impl.GatewayClientImpl - Gateway Response received. Status=SUCCESS
+2026-07-30 20:16:57 INFO  c.m.p.service.impl.GatewayClientImpl - Calling Mock Gateway for PaymentId=PAY123
+2026-07-30 20:16:57 INFO  c.m.p.s.impl.MockGatewayServiceImpl - Mock Gateway received payment request. PaymentId=PAY123
+2026-07-30 20:16:57 INFO  c.m.p.s.impl.MockGatewayServiceImpl - Payment successful. PaymentId=PAY123, TransactionId=1d2242ec-a2d0-42ca-8f97-5e3f3717327f
+2026-07-30 20:16:57 INFO  c.m.p.s.impl.MockGatewayServiceImpl - Sending callback for PaymentId=PAY123
+2026-07-30 20:16:57 INFO  c.m.p.s.impl.MockGatewayServiceImpl - Callback sent successfully.
+2026-07-30 20:16:58 INFO  c.m.p.s.impl.MockGatewayServiceImpl - Mock Gateway received payment request. PaymentId=PAY123
+2026-07-30 20:16:58 INFO  c.m.p.s.impl.MockGatewayServiceImpl - Mock Gateway received payment request. PaymentId=PAY123
+2026-07-30 20:16:58 WARN  c.m.p.s.impl.MockGatewayServiceImpl - Payment failed. PaymentId=PAY123, Reason=Insufficient Funds
+2026-07-30 20:16:58 INFO  c.m.p.s.impl.MockGatewayServiceImpl - Sending callback for PaymentId=PAY123
+2026-07-30 20:16:58 INFO  c.m.p.s.impl.MockGatewayServiceImpl - Callback sent successfully.
+2026-07-30 20:17:00 INFO  c.m.p.s.impl.PaymentServiceImpl - Fetching payment details. PaymentId=PAY123
+2026-07-30 20:17:00 INFO  c.m.p.s.impl.PaymentServiceImpl - Payment found. PaymentId=PAY123, Status=SUCCESS
+2026-07-30 20:17:00 INFO  c.m.p.s.impl.PaymentServiceImpl - Fetching payments with status=SUCCESS
+2026-07-30 20:17:00 INFO  c.m.p.s.impl.PaymentServiceImpl - Fetching all payments
+2026-07-30 20:17:00 INFO  c.m.p.s.impl.PaymentServiceImpl - Creating payment. Amount=1000, Currency=INR
+2026-07-30 20:17:00 INFO  c.m.p.s.impl.PaymentServiceImpl - Payment created successfully. PaymentId=PAY123
+2026-07-30 20:17:00 ERROR c.m.p.s.impl.PaymentServiceImpl - Failed to invoke payment gateway for PaymentId=PAY123
+java.lang.RuntimeException: Gateway unavailable
+	at com.matrix.payment_service.service.impl.PaymentServiceImpl.createPayment(PaymentServiceImpl.java:53)
+	at com.matrix.payment_service.service.impl.PaymentServiceImplTest.lambda$shouldMarkPaymentFailedWhenGatewayFails$0(PaymentServiceImplTest.java:98)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:54)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+	at org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3223)
+	at com.matrix.payment_service.service.impl.PaymentServiceImplTest.shouldMarkPaymentFailedWhenGatewayFails(PaymentServiceImplTest.java:96)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:701)
+	at org.junit.platform.commons.support.ReflectionSupport.invokeMethod(ReflectionSupport.java:502)
+	at org.junit.jupiter.engine.support.MethodReflectionUtils.invoke(MethodReflectionUtils.java:45)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:61)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:124)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:163)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:148)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:123)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:105)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:99)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:66)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:47)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:39)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:104)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:98)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invokeVoid(InterceptingExecutableInvoker.java:71)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$0(TestMethodTestDescriptor.java:219)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:215)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:157)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:70)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$2(NodeTestTask.java:176)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$1(NodeTestTask.java:166)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$0(NodeTestTask.java:164)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:163)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:116)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:42)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$2(NodeTestTask.java:180)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$1(NodeTestTask.java:166)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$0(NodeTestTask.java:164)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:163)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:116)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:42)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$2(NodeTestTask.java:180)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$1(NodeTestTask.java:166)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$0(NodeTestTask.java:164)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:163)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:116)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:36)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:52)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:58)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.executeEngine(EngineExecutionOrchestrator.java:246)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.failOrExecuteEngine(EngineExecutionOrchestrator.java:218)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:179)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:108)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:66)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:157)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:65)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:125)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:58)
+	at org.junit.platform.launcher.core.InterceptingLauncher.lambda$execute$2(InterceptingLauncher.java:57)
+	at org.junit.platform.launcher.core.ClasspathAlignmentCheckingLauncherInterceptor.intercept(ClasspathAlignmentCheckingLauncherInterceptor.java:25)
+	at org.junit.platform.launcher.core.InterceptingLauncher.execute(InterceptingLauncher.java:56)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:58)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.apache.maven.surefire.api.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:125)
+	at org.apache.maven.surefire.junitplatform.LauncherAdapter.executeWithCancellationToken(LauncherAdapter.java:68)
+	at org.apache.maven.surefire.junitplatform.LauncherAdapter.execute(LauncherAdapter.java:54)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:203)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:168)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:136)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+2026-07-30 20:17:00 INFO  c.m.p.s.impl.PaymentServiceImpl - Received callback. PaymentId=PAY123, Status=SUCCESS
+2026-07-30 20:17:00 WARN  c.m.p.s.impl.PaymentServiceImpl - Duplicate callback ignored. PaymentId=PAY123, CurrentStatus=SUCCESS
+2026-07-30 20:17:00 INFO  c.m.p.s.impl.PaymentServiceImpl - Creating payment. Amount=1000, Currency=INR
+2026-07-30 20:17:00 INFO  c.m.p.s.impl.PaymentServiceImpl - Payment created successfully. PaymentId=PAY123
+2026-07-30 20:17:00 INFO  c.m.p.s.impl.PaymentServiceImpl - Gateway response received. PaymentId=PAY123, Status=SUCCESS, TransactionId=TXN123
+2026-07-30 20:17:00 INFO  c.m.p.s.impl.PaymentServiceImpl - Fetching payment details. PaymentId=PAY123
+2026-07-30 20:17:00 ERROR c.m.p.s.impl.PaymentServiceImpl - Payment not found. PaymentId=PAY123
+2026-07-30 20:17:00 INFO  c.m.p.s.impl.PaymentServiceImpl - Received callback. PaymentId=PAY123, Status=SUCCESS
+2026-07-30 20:17:00 INFO  c.m.p.s.impl.PaymentServiceImpl - Payment updated successfully. PaymentId=PAY123, Status=SUCCESS
+2026-07-30 20:17:00 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-07-30 20:17:00 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-07-30 20:17:00 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-07-30 20:17:25 INFO  c.m.p.PaymentServiceApplicationTests - Starting PaymentServiceApplicationTests using Java 24.0.1 with PID 15992 (started by mvgan in C:\Users\mvgan\Downloads\payment-service\payment-service)
+2026-07-30 20:17:25 DEBUG c.m.p.PaymentServiceApplicationTests - Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-07-30 20:17:25 INFO  c.m.p.PaymentServiceApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2026-07-30 20:17:27 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-30 20:17:27 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 98 ms. Found 1 JPA repository interface.
+2026-07-30 20:17:28 INFO  org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-07-30 20:17:28 INFO  org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.4.1.Final
+2026-07-30 20:17:29 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-30 20:17:29 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-07-30 20:17:30 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:paymentdb user=ELANGOVAN
+2026-07-30 20:17:30 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-07-30 20:17:30 INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:paymentdb]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: PAYMENTDB/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-07-30 20:17:31 INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-30 20:17:32 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-30 20:17:32 INFO  o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-07-30 20:17:33 WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-07-30 20:17:34 INFO  o.s.b.h.a.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:paymentdb'
+2026-07-30 20:17:34 INFO  c.m.p.PaymentServiceApplicationTests - Started PaymentServiceApplicationTests in 9.839 seconds (process running for 12.02)
+2026-07-30 20:17:35 INFO  c.m.p.service.impl.GatewayClientImpl - Calling Mock Gateway for PaymentId=PAY123
+2026-07-30 20:17:35 INFO  c.m.p.service.impl.GatewayClientImpl - Gateway Response received. Status=SUCCESS
+2026-07-30 20:17:35 INFO  c.m.p.service.impl.GatewayClientImpl - Calling Mock Gateway for PaymentId=PAY123
+2026-07-30 20:17:35 INFO  c.m.p.s.impl.MockGatewayServiceImpl - Mock Gateway received payment request. PaymentId=PAY123
+2026-07-30 20:17:35 INFO  c.m.p.s.impl.MockGatewayServiceImpl - Payment successful. PaymentId=PAY123, TransactionId=9f310411-840f-4dfe-982a-2702d9e8ee67
+2026-07-30 20:17:35 INFO  c.m.p.s.impl.MockGatewayServiceImpl - Sending callback for PaymentId=PAY123
+2026-07-30 20:17:35 INFO  c.m.p.s.impl.MockGatewayServiceImpl - Callback sent successfully.
+2026-07-30 20:17:37 INFO  c.m.p.s.impl.MockGatewayServiceImpl - Mock Gateway received payment request. PaymentId=PAY123
+2026-07-30 20:17:37 INFO  c.m.p.s.impl.MockGatewayServiceImpl - Mock Gateway received payment request. PaymentId=PAY123
+2026-07-30 20:17:37 WARN  c.m.p.s.impl.MockGatewayServiceImpl - Payment failed. PaymentId=PAY123, Reason=Insufficient Funds
+2026-07-30 20:17:37 INFO  c.m.p.s.impl.MockGatewayServiceImpl - Sending callback for PaymentId=PAY123
+2026-07-30 20:17:37 INFO  c.m.p.s.impl.MockGatewayServiceImpl - Callback sent successfully.
+2026-07-30 20:17:38 INFO  c.m.p.s.impl.PaymentServiceImpl - Fetching payment details. PaymentId=PAY123
+2026-07-30 20:17:38 INFO  c.m.p.s.impl.PaymentServiceImpl - Payment found. PaymentId=PAY123, Status=SUCCESS
+2026-07-30 20:17:38 INFO  c.m.p.s.impl.PaymentServiceImpl - Fetching payments with status=SUCCESS
+2026-07-30 20:17:38 INFO  c.m.p.s.impl.PaymentServiceImpl - Fetching all payments
+2026-07-30 20:17:38 INFO  c.m.p.s.impl.PaymentServiceImpl - Creating payment. Amount=1000, Currency=INR
+2026-07-30 20:17:38 INFO  c.m.p.s.impl.PaymentServiceImpl - Payment created successfully. PaymentId=PAY123
+2026-07-30 20:17:38 ERROR c.m.p.s.impl.PaymentServiceImpl - Failed to invoke payment gateway for PaymentId=PAY123
+java.lang.RuntimeException: Gateway unavailable
+	at com.matrix.payment_service.service.impl.PaymentServiceImpl.createPayment(PaymentServiceImpl.java:53)
+	at com.matrix.payment_service.service.impl.PaymentServiceImplTest.lambda$shouldMarkPaymentFailedWhenGatewayFails$0(PaymentServiceImplTest.java:98)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:54)
+	at org.junit.jupiter.api.AssertThrows.assertThrows(AssertThrows.java:35)
+	at org.junit.jupiter.api.Assertions.assertThrows(Assertions.java:3223)
+	at com.matrix.payment_service.service.impl.PaymentServiceImplTest.shouldMarkPaymentFailedWhenGatewayFails(PaymentServiceImplTest.java:96)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:701)
+	at org.junit.platform.commons.support.ReflectionSupport.invokeMethod(ReflectionSupport.java:502)
+	at org.junit.jupiter.engine.support.MethodReflectionUtils.invoke(MethodReflectionUtils.java:45)
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:61)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:124)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:163)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:148)
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:86)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(InterceptingExecutableInvoker.java:123)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.lambda$invoke$0(InterceptingExecutableInvoker.java:105)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:99)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:66)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:47)
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:39)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:104)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invoke(InterceptingExecutableInvoker.java:98)
+	at org.junit.jupiter.engine.execution.InterceptingExecutableInvoker.invokeVoid(InterceptingExecutableInvoker.java:71)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$0(TestMethodTestDescriptor.java:219)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:215)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:157)
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:70)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$2(NodeTestTask.java:176)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$1(NodeTestTask.java:166)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$0(NodeTestTask.java:164)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:163)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:116)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:42)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$2(NodeTestTask.java:180)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$1(NodeTestTask.java:166)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$0(NodeTestTask.java:164)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:163)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:116)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:42)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$2(NodeTestTask.java:180)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$1(NodeTestTask.java:166)
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:138)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$0(NodeTestTask.java:164)
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:74)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:163)
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:116)
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:36)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:52)
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:58)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.executeEngine(EngineExecutionOrchestrator.java:246)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.failOrExecuteEngine(EngineExecutionOrchestrator.java:218)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:179)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:108)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:66)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:157)
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:65)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:125)
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:58)
+	at org.junit.platform.launcher.core.InterceptingLauncher.lambda$execute$2(InterceptingLauncher.java:57)
+	at org.junit.platform.launcher.core.ClasspathAlignmentCheckingLauncherInterceptor.intercept(ClasspathAlignmentCheckingLauncherInterceptor.java:25)
+	at org.junit.platform.launcher.core.InterceptingLauncher.execute(InterceptingLauncher.java:56)
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:58)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.apache.maven.surefire.api.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:125)
+	at org.apache.maven.surefire.junitplatform.LauncherAdapter.executeWithCancellationToken(LauncherAdapter.java:68)
+	at org.apache.maven.surefire.junitplatform.LauncherAdapter.execute(LauncherAdapter.java:54)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.execute(JUnitPlatformProvider.java:203)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:168)
+	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:136)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+2026-07-30 20:17:38 INFO  c.m.p.s.impl.PaymentServiceImpl - Received callback. PaymentId=PAY123, Status=SUCCESS
+2026-07-30 20:17:38 WARN  c.m.p.s.impl.PaymentServiceImpl - Duplicate callback ignored. PaymentId=PAY123, CurrentStatus=SUCCESS
+2026-07-30 20:17:38 INFO  c.m.p.s.impl.PaymentServiceImpl - Creating payment. Amount=1000, Currency=INR
+2026-07-30 20:17:38 INFO  c.m.p.s.impl.PaymentServiceImpl - Payment created successfully. PaymentId=PAY123
+2026-07-30 20:17:38 INFO  c.m.p.s.impl.PaymentServiceImpl - Gateway response received. PaymentId=PAY123, Status=SUCCESS, TransactionId=TXN123
+2026-07-30 20:17:38 INFO  c.m.p.s.impl.PaymentServiceImpl - Fetching payment details. PaymentId=PAY123
+2026-07-30 20:17:38 ERROR c.m.p.s.impl.PaymentServiceImpl - Payment not found. PaymentId=PAY123
+2026-07-30 20:17:38 INFO  c.m.p.s.impl.PaymentServiceImpl - Received callback. PaymentId=PAY123, Status=SUCCESS
+2026-07-30 20:17:38 INFO  c.m.p.s.impl.PaymentServiceImpl - Payment updated successfully. PaymentId=PAY123, Status=SUCCESS
+2026-07-30 20:17:38 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-07-30 20:17:38 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-07-30 20:17:38 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-07-30 20:17:51 INFO  c.m.p.PaymentServiceApplication - Starting PaymentServiceApplication using Java 24.0.1 with PID 30020 (C:\Users\mvgan\Downloads\payment-service\payment-service\target\classes started by mvgan in C:\Users\mvgan\Downloads\payment-service\payment-service)
+2026-07-30 20:17:51 DEBUG c.m.p.PaymentServiceApplication - Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-07-30 20:17:51 INFO  c.m.p.PaymentServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2026-07-30 20:17:52 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-07-30 20:17:52 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-07-30 20:17:53 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-30 20:17:53 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 62 ms. Found 1 JPA repository interface.
+2026-07-30 20:17:54 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-07-30 20:17:54 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-07-30 20:17:54 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-07-30 20:17:54 INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 2025 ms
+2026-07-30 20:17:54 INFO  org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-07-30 20:17:54 INFO  org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.4.1.Final
+2026-07-30 20:17:55 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-30 20:17:55 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-07-30 20:17:55 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:paymentdb user=ELANGOVAN
+2026-07-30 20:17:55 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-07-30 20:17:55 INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:paymentdb]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: PAYMENTDB/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-07-30 20:17:56 INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-30 20:17:56 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-30 20:17:56 INFO  o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-07-30 20:17:57 WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-07-30 20:17:57 INFO  o.s.b.h.a.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:paymentdb'
+2026-07-30 20:17:57 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-07-30 20:17:57 INFO  c.m.p.PaymentServiceApplication - Started PaymentServiceApplication in 6.683 seconds (process running for 7.494)
+2026-07-30 20:19:12 INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2026-07-30 20:19:12 INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-07-30 20:19:12 INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-07-30 20:19:12 ERROR org.apache.tomcat.util.net.Acceptor - Socket accept failed
+java.nio.channels.AsynchronousCloseException
+	at java.base/java.nio.channels.spi.AbstractInterruptibleChannel.end(AbstractInterruptibleChannel.java:218)
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.end(ServerSocketChannelImpl.java:374)
+	at java.base/sun.nio.ch.ServerSocketChannelImpl.accept(ServerSocketChannelImpl.java:399)
+	at org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept(NioEndpoint.java:532)
+	at org.apache.tomcat.util.net.NioEndpoint.serverSocketAccept(NioEndpoint.java:71)
+	at org.apache.tomcat.util.net.Acceptor.run(Acceptor.java:127)
+	at java.base/java.lang.Thread.run(Thread.java:1447)
+2026-07-30 20:19:12 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-07-30 20:19:12 WARN  o.s.b.f.s.DisposableBeanAdapter - Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-240]
+2026-07-30 20:19:12 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-07-30 20:19:12 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-07-30 20:19:12 INFO  c.m.p.PaymentServiceApplication - Starting PaymentServiceApplication using Java 24.0.1 with PID 30020 (C:\Users\mvgan\Downloads\payment-service\payment-service\target\classes started by mvgan in C:\Users\mvgan\Downloads\payment-service\payment-service)
+2026-07-30 20:19:12 DEBUG c.m.p.PaymentServiceApplication - Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-07-30 20:19:12 INFO  c.m.p.PaymentServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2026-07-30 20:19:13 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-30 20:19:13 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 20 ms. Found 1 JPA repository interface.
+2026-07-30 20:19:13 INFO  c.m.p.PaymentServiceApplication - Starting PaymentServiceApplication using Java 25.0.1 with PID 12800 (C:\Users\mvgan\Downloads\payment-service\payment-service\target\classes started by mvgan in C:\Users\mvgan\Downloads\payment-service\payment-service)
+2026-07-30 20:19:13 DEBUG c.m.p.PaymentServiceApplication - Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-07-30 20:19:13 INFO  c.m.p.PaymentServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2026-07-30 20:19:13 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-07-30 20:19:13 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-07-30 20:19:13 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-07-30 20:19:13 INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 860 ms
+2026-07-30 20:19:13 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-07-30 20:19:13 INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-07-30 20:19:13 INFO  org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-07-30 20:19:13 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-30 20:19:13 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+2026-07-30 20:19:13 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-2 - Added connection conn10: url=jdbc:h2:mem:paymentdb user=ELANGOVAN
+2026-07-30 20:19:13 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+2026-07-30 20:19:13 INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:paymentdb]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: PAYMENTDB/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-07-30 20:19:13 INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-30 20:19:13 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-30 20:19:14 WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-07-30 20:19:14 INFO  o.s.b.h.a.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:paymentdb'
+2026-07-30 20:19:14 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-07-30 20:19:14 INFO  c.m.p.PaymentServiceApplication - Started PaymentServiceApplication in 1.696 seconds (process running for 83.922)
+2026-07-30 20:19:14 INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+2026-07-30 20:19:15 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-07-30 20:19:15 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 93 ms. Found 1 JPA repository interface.
+2026-07-30 20:19:16 INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-07-30 20:19:16 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-07-30 20:19:16 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.22]
+2026-07-30 20:19:16 INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 2997 ms
+2026-07-30 20:19:17 INFO  org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-07-30 20:19:17 INFO  org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.4.1.Final
+2026-07-30 20:19:17 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-07-30 20:19:17 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-07-30 20:19:18 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:paymentdb user=ELANGOVAN
+2026-07-30 20:19:18 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-07-30 20:19:18 INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:paymentdb]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: PAYMENTDB/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-07-30 20:19:19 INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-07-30 20:19:19 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-07-30 20:19:19 INFO  o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-07-30 20:19:20 WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-07-30 20:19:20 INFO  o.s.b.h.a.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:paymentdb'
+2026-07-30 20:19:20 WARN  o.s.b.w.s.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2026-07-30 20:19:20 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-07-30 20:19:20 WARN  o.s.b.f.s.DisposableBeanAdapter - Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-240]
+2026-07-30 20:19:20 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-07-30 20:19:20 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-07-30 20:19:20 INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-07-30 20:19:20 ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2026-07-30 20:19:46 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-07-30 20:19:46 INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2026-07-30 20:19:46 INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2026-07-30 20:19:47 INFO  c.m.p.controller.CallbackController - Received callback for PaymentId=cd8bbdb4-4881-43e9-8ded-8db2f7b4a989, Status=SUCCESS
+2026-07-30 20:19:47 INFO  c.m.p.s.impl.PaymentServiceImpl - Received callback. PaymentId=cd8bbdb4-4881-43e9-8ded-8db2f7b4a989, Status=SUCCESS
+2026-07-30 20:19:47 ERROR c.m.p.s.impl.PaymentServiceImpl - Payment not found during callback. PaymentId=cd8bbdb4-4881-43e9-8ded-8db2f7b4a989
+2026-07-30 20:19:47 ERROR c.m.p.e.GlobalExceptionHandler - Payment not found : Payment not found with id : cd8bbdb4-4881-43e9-8ded-8db2f7b4a989
+2026-07-30 20:19:47 WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - Resolved [com.matrix.payment_service.exception.PaymentNotFoundException: Payment not found with id : cd8bbdb4-4881-43e9-8ded-8db2f7b4a989]
+2026-07-30 20:19:56 INFO  c.m.p.controller.PaymentController - Received create payment request
+2026-07-30 20:19:56 INFO  c.m.p.s.impl.PaymentServiceImpl - Creating payment. Amount=1000.00, Currency=INR
+2026-07-30 20:19:56 INFO  c.m.p.s.impl.PaymentServiceImpl - Payment created successfully. PaymentId=704d86ba-87ee-412c-b459-31fa27a558bd
+2026-07-30 20:19:56 INFO  c.m.p.service.impl.GatewayClientImpl - Calling Mock Gateway for PaymentId=704d86ba-87ee-412c-b459-31fa27a558bd
+2026-07-30 20:19:56 INFO  c.m.p.c.MockGatewayController - Mock Gateway API called for PaymentId=704d86ba-87ee-412c-b459-31fa27a558bd
+2026-07-30 20:19:56 INFO  c.m.p.s.impl.MockGatewayServiceImpl - Mock Gateway received payment request. PaymentId=704d86ba-87ee-412c-b459-31fa27a558bd
+2026-07-30 20:19:56 INFO  c.m.p.s.impl.MockGatewayServiceImpl - Payment successful. PaymentId=704d86ba-87ee-412c-b459-31fa27a558bd, TransactionId=d46d681e-a5cc-4491-a2c6-dfcf048016f5
+2026-07-30 20:19:56 INFO  c.m.p.s.impl.MockGatewayServiceImpl - Sending callback for PaymentId=704d86ba-87ee-412c-b459-31fa27a558bd
+2026-07-30 20:19:56 INFO  c.m.p.s.impl.MockGatewayServiceImpl - Callback sent successfully.
+2026-07-30 20:19:56 INFO  c.m.p.c.MockGatewayController - Mock Gateway response=SUCCESS
+2026-07-30 20:19:56 INFO  c.m.p.service.impl.GatewayClientImpl - Gateway Response received. Status=SUCCESS
+2026-07-30 20:19:56 INFO  c.m.p.s.impl.PaymentServiceImpl - Gateway response received. PaymentId=704d86ba-87ee-412c-b459-31fa27a558bd, Status=SUCCESS, TransactionId=d46d681e-a5cc-4491-a2c6-dfcf048016f5
+2026-07-30 20:19:56 INFO  c.m.p.controller.PaymentController - Payment created successfully. PaymentId=704d86ba-87ee-412c-b459-31fa27a558bd
+2026-07-30 20:19:57 INFO  c.m.p.controller.CallbackController - Received callback for PaymentId=704d86ba-87ee-412c-b459-31fa27a558bd, Status=SUCCESS
+2026-07-30 20:19:57 INFO  c.m.p.s.impl.PaymentServiceImpl - Received callback. PaymentId=704d86ba-87ee-412c-b459-31fa27a558bd, Status=SUCCESS
+2026-07-30 20:19:57 INFO  c.m.p.s.impl.PaymentServiceImpl - Payment updated successfully. PaymentId=704d86ba-87ee-412c-b459-31fa27a558bd, Status=SUCCESS
+2026-07-30 20:19:57 INFO  c.m.p.controller.CallbackController - Callback processed successfully.
